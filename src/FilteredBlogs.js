@@ -5,7 +5,7 @@ import BlogList from './BlogList';
 
 const FilteredBlogs = ({ category }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const { error, isPending, data: blogs } = useFetch(`http://localhost:5000/${category}`);
+  const { error, isPending, data: blogs } = useFetch(`https://blognest.vercel.app/${category}`);
 
   const filteredBlogs = blogs 
     ? blogs.filter(blog =>
