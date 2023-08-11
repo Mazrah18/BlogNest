@@ -3,11 +3,11 @@ import useFetch from "../useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data: blog, error, isPending } = useFetch('https://blognest.vercel.app/blogs/' + id);
+  const { data: blog, error, isPending } = useFetch('http://localhost:5000/blogs/' + id);
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch(`https://blognest.vercel.app/blogs/${id}`, {
+    fetch(`http://localhost:5000/blogs/${id}`, {
       method: 'DELETE',
     })
     .then(response => {

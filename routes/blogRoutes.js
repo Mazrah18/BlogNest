@@ -4,13 +4,14 @@ const { ObjectId ,MongoClient } = require('mongodb');
 
 const app = express();
 const port = process.env.PORT || 5000;
-const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWrites=true&w=majority';
+// const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://vercel-admin-user:JS2CIHXIlrP6c5xw@blog.sjd6eaj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(cors(
   {
-    origin : ["https://blog-nest-api.vercel.app/"] , 
+    origin : ["https://blognest.vercel.app/"] , 
     methods : ["POST" , "GET"] ,
     credentials : true
 
