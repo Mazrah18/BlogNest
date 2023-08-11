@@ -10,12 +10,12 @@ const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopo
 
 app.use(cors(
   {
-    origin : ["https://blognest.vercel.app/"] , 
-    methods : ["POST" , "GET"] ,
-    credentials : true
-
+    origin: ["https://blognest.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
   }
 ));
+
 
 client.connect()
   .then(() => {
