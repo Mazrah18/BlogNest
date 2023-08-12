@@ -40,7 +40,7 @@ const LifestyleDetails = () => {
           <div className="blog-body" style={{ whiteSpace: 'pre-line' }}>{lifestyle.body}</div>
         </article>
       )}
-      {lifestyle && ( <div>
+      {lifestyle && ( <div className="details-button">
 
         <button className="delete-button" onClick={handleDelete}>
         Delete
