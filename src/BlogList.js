@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const BlogList = ({ blogs, category }) => {
   const [displayCount, setDisplayCount] = useState(4); // Initial display count (2 rows)
-
+  const blogListRef = useRef();
   useEffect(() => {
     // Update the display count based on screen size
     const updateDisplayCount = () => {
@@ -30,6 +30,7 @@ const BlogList = ({ blogs, category }) => {
 
   const handleViewMore = () => {
     setDisplayCount(displayCount + 3); // Increase display count by 3 blogs
+    blogListRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   if (blogs.length === 0) {
