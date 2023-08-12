@@ -12,7 +12,7 @@ const TechDetails = () => {
     })
     .then(response => {
       if (response.ok) {
-        history.push('/techId'); 
+        history.push('/tech'); 
       } else {
         console.error('Error deleting tech:', response.statusText);
       }
