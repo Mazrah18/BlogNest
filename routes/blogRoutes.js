@@ -8,13 +8,13 @@ const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWr
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(cors(
-  {
-    origin: ["https://blognest.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-));
+// app.use(cors(
+//   {
+//     origin: ["https://blognest.vercel.app"],
+//     methods: ["POST", "GET"],
+//     credentials: true
+//   }
+// ));
 
 
 client.connect()
@@ -342,7 +342,7 @@ app.delete('/lifestyle/:lifestyleId', (req, res) => {
     });
 
     app.listen(port, () => {
-      console.log(`Server is running on http://localhost:${port}`);
+      console.log(`Server is running`);
     });
   })
   .catch(error => {
