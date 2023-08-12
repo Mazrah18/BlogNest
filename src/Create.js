@@ -12,7 +12,7 @@ const Create = () => {
     const blog = { title, body, author };
     const category = e.target.category.value; // Get the selected category from the form
 
-    fetch(`http://localhost:5000/${category}`, {
+    fetch(`https://blog-nest-backend.onrender.com/${category}`, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)
