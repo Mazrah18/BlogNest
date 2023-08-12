@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const TravelDetails = () => {
   const {travelId } = useParams();
-  const { data: travel, error, isPending } = useFetch(`https://blog-nest-backend.onrender.com/${travelId}`);
+  const { data: travel, error, isPending } = useFetch(`https://blog-nest-backend.onrender.com//travel/${travelId}`);
   const history = useHistory();
 
   const handleDelete = () => {
