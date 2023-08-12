@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data: blog, error, isPending } = useFetch('http://localhost:5000/blogs/' + id);
+  const { data: blog, error, isPending } = useFetch('https://blog-nest-backend.onrender.com/blogs/' + id);
   const history = useHistory();
 
   const handleDelete = () => {
