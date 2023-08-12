@@ -7,7 +7,7 @@ const BlogDetails = () => {
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch(`http://localhost:5000/blogs/${id}`, {
+    fetch(`https://blog-nest-backend.onrender.com/blogs/${id}`, {
       method: 'DELETE',
     })
     .then(response => {

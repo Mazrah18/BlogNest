@@ -3,11 +3,11 @@ import useFetch from "../useFetch";
 
 const TechDetails = () => {
   const {techId } = useParams();
-  const { data: tech, error, isPending } = useFetch(`http://localhost:5000/tech/${techId}`);
+  const { data: tech, error, isPending } = useFetch(`https://blog-nest-backend.onrender.com/tech/${techId}`);
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch(`http://localhost:5000/tech/${techId}`, {
+    fetch(`https://blog-nest-backend.onrender.com/tech/${techId}`, {
       method: 'DELETE',
     })
     .then(response => {
