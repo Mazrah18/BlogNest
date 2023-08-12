@@ -21,7 +21,11 @@ const BlogDetails = () => {
       console.error('Error deleting blog:', error);
     });
   };
+  const handleBack = () =>{
 
+    history.push('/blogs')
+
+  }
   return (
 
     <div className="blog-details">
@@ -37,6 +41,7 @@ const BlogDetails = () => {
       )}
       {blog && (
         <button className="delete-button" onClick={handleDelete}>
+            <button onClick={handleBack}>GO BACK?</button>
           Delete
         </button>
       )}
@@ -49,12 +54,3 @@ const BlogDetails = () => {
 export default BlogDetails;
 
 
-// import React from 'react';
-
-// const BlogDetails = ({ blog, isPending, error, handleDelete }) => {
-//   return (
-   
-//   );
-// }
-
-// export default BlogDetails;

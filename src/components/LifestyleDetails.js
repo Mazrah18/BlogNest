@@ -21,7 +21,11 @@ const LifestyleDetails = () => {
       console.error('Error deleting lifestyle:', error);
     });
   };
+  const handleBack = () =>{
 
+    history.push('/lifestyle')
+
+  }
   return (
     <div className="content-details">
       { isPending && <div>Loading...</div> }
@@ -32,6 +36,7 @@ const LifestyleDetails = () => {
           <p>Written by { lifestyle.author }</p>
           <div>{ lifestyle.body }</div>
           <button onClick={handleDelete}>Delete</button>
+          <button onClick={handleBack}>GO BACK?</button>
         </article>
       )}
     </div>

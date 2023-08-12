@@ -21,7 +21,11 @@ const RecipeDetails = () => {
       console.error('Error deleting recipe:', error);
     });
   };
+  const handleBack = () =>{
 
+    history.push('/recipes')
+
+  }
   return (
     <div className="content-details">
       { isPending && <div>Loading...</div> }
@@ -32,6 +36,7 @@ const RecipeDetails = () => {
           <p>Written by { recipe.author }</p>
           <div>{ recipe.body }</div>
           <button onClick={handleDelete}>Delete</button>
+          <button onClick={handleBack}>GO BACK?</button>
         </article>
       )}
     </div>
