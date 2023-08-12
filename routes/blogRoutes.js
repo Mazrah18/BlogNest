@@ -29,7 +29,12 @@ client.connect()
 
 
 //BLOGS INDIVIDUAL DISPLAY
+  // Default route handler
+  app.get('/', (req, res) => {
+    res.json('HELLO');
+  });
 
+  
     app.get('/blogs/:blogId', (req, res) => {
         const blogId = req.params.blogId;
         blogsCollection.findOne({ _id: new ObjectId(blogId) })
@@ -336,11 +341,7 @@ app.delete('/lifestyle/:lifestyleId', (req, res) => {
 
 
 
-    // Default route handler
-    app.get('/', (req, res) => {
-      res.json('HELLO');
-    });
-
+  
     app.listen(port, () => {
       console.log(`Server is running`);
     });
