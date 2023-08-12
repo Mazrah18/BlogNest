@@ -19,7 +19,7 @@ const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopo
 app.use(cors(
   {
     origin: ["https://parth-blognest.netlify.app"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "DELETE"],
     credentials: true
   }
 ));
