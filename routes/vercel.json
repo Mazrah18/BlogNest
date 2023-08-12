@@ -1,0 +1,13 @@
+{
+   "version": 2,
+   "name": "BlogNEst",
+   "builds": [
+     { "src": "*.js", "use": "@vercel/node" }
+   ],
+   "routes": [ {
+    "src" : "/(.*)",
+    "dest" : "/"
+   }
+   ]
+ }
+ 
