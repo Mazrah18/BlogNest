@@ -9,9 +9,16 @@ const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWr
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+// app.use(cors(
+//   {
+//     origin: ["https://cosmic-tarsier-7d078d.netlify.app", "https://parth-blognest.netlify.app"],
+//     methods: ["POST", "GET"],
+//     credentials: true
+//   }
+// ));
 app.use(cors(
   {
-    origin: ["https://cosmic-tarsier-7d078d.netlify.app", "https://parth-blognest.netlify.app"],
+    origin: ["https://parth-blognest.netlify.app"],
     methods: ["POST", "GET"],
     credentials: true
   }
