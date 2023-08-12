@@ -9,14 +9,12 @@ const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWr
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(cors(
-  {
-    origin : ["https://blog-nest-api.vercel.app/"] , 
-    methods : ["POST" , "GET"] ,
-    credentials : true
+app.use(cors({
+  origin: 'https://cosmic-tarsier-7d078d.netlify.app',
+  methods: ['POST', 'GET'],
+  credentials: true,
+}));
 
-  }
-));
 
 client.connect()
   .then(() => {
