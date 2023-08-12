@@ -4,7 +4,7 @@ const { ObjectId ,MongoClient } = require('mongodb');
 
 const app = express();
 const port = process.env.PORT || 5000;
-const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/blog?retryWrites=true&w=majority';
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
