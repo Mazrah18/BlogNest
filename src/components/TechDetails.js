@@ -12,7 +12,7 @@ const TechDetails = () => {
     })
     .then(response => {
       if (response.ok) {
-        history.push('/techId'); // Redirect to recipes list
+        history.push('/techId'); 
       } else {
         console.error('Error deleting tech:', response.statusText);
       }
@@ -28,19 +28,29 @@ const TechDetails = () => {
 
   }
   return (
-    <div className="content-details">
-      { isPending && <div>Loading...</div> }
-      { error && <div>{ error }</div> }
-      { tech && (
-        <article>
-          <h2>{ tech.title }</h2>
-          <p>Written by { tech.author }</p>
-          <div>{ tech.body }</div>
-          <button onClick={handleDelete}>Delete</button>
-          <button onClick={handleBack}>GO BACK?</button>
+    <div className="blog-details">
+    <div className="blog-content">
+      {isPending && <div className="loading">Loading...</div>}
+      {error && <div className="error">{error}</div>}
+      {tech && (
+        <article className="blog-article">
+          <h1 className="blog-title">{tech.title}</h1>
+          <p className="blog-author">Written by {tech.author}</p>
+          <div className="blog-body" style={{ whiteSpace: 'pre-line' }}>{tech.body}</div>
         </article>
       )}
+      {tech && ( <div>
+
+        <button className="delete-button" onClick={handleDelete}>
+        Delete
+        </button>
+       <button className= "back-button" onClick={handleBack}>GO BACK?</button>
+
+      </div>
+      
+      )}
     </div>
+  </div>
   );
 }
  

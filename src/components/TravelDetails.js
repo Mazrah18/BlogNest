@@ -27,19 +27,29 @@ const TravelDetails = () => {
 
   }
   return (
-    <div className="content-details">
-      { isPending && <div>Loading...</div> }
-      { error && <div>{ error }</div> }
-      { travel && (
-        <article>
-          <h2>{ travel.title }</h2>
-          <p>Written by { travel.author }</p>
-          <div>{ travel.body }</div>
-          <button onClick={handleDelete}>Delete</button>
-          <button onClick={handleBack}>GO BACK?</button>
+    <div className="blog-details">
+    <div className="blog-content">
+      {isPending && <div className="loading">Loading...</div>}
+      {error && <div className="error">{error}</div>}
+      {travel && (
+        <article className="blog-article">
+          <h1 className="blog-title">{travel.title}</h1>
+          <p className="blog-author">Written by {travel.author}</p>
+          <div className="blog-body" style={{ whiteSpace: 'pre-line' }}>{travel.body}</div>
         </article>
       )}
+      {travel && ( <div>
+
+        <button className="delete-button" onClick={handleDelete}>
+        Delete
+        </button>
+       <button className= "back-button" onClick={handleBack}>GO BACK?</button>
+
+      </div>
+      
+      )}
     </div>
+  </div>
   );
 }
  
