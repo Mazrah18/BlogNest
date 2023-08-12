@@ -23,9 +23,10 @@ const BlogList = ({ blogs, category }) => {
       window.removeEventListener('resize', updateDisplayCount);
     };
   }, []);
+  const reversedBlogs = [...blogs].reverse(); // Reverse the blogs array
 
-  const blogsToDisplay = blogs.slice(0, displayCount);
-  const blogsToLoad = blogs.slice(displayCount);
+  const blogsToDisplay = reversedBlogs.slice(0, displayCount);
+  const blogsToLoad = reversedBlogs.slice(displayCount);
 
   const handleViewMore = () => {
     setDisplayCount(displayCount + 3); // Increase display count by 3 blogs
