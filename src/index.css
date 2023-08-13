@@ -279,11 +279,11 @@
 
 /* blog previews / list */
  .blog-preview {
+
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
-  display: flex;
-  flex-direction: column;
+
   gap: 10%;
 }
 .blog-preview:hover {
