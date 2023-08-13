@@ -23,7 +23,7 @@ const BlogDetails = () => {
   };
   const handleBack = () =>{
 
-    history.push('/blogs')
+    history.push('/')
 
   }
   return (
