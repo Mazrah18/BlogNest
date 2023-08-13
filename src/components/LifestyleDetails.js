@@ -3,11 +3,11 @@ import useFetch from "../useFetch";
 
 const LifestyleDetails = () => {
   const {lifestyleId } = useParams();
-  const { data: lifestyle, error, isPending } = useFetch(`https://blog-nest-backend.onrender.com/lifestyle/${lifestyleId}`);
+  const { data: lifestyle, error, isPending } = useFetch(`https://blognest-backend.adaptable.app/lifestyle/${lifestyleId}`);
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch(`https://blog-nest-backend.onrender.com/lifestyle/${lifestyleId}`, {
+    fetch(`https://blognest-backend.adaptable.app/lifestyle/${lifestyleId}`, {
       method: 'DELETE',
     })
     .then(response => {

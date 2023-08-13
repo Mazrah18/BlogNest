@@ -5,7 +5,7 @@ import BlogList from './BlogList';
 
 const FilteredBlogs = ({ category }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const { error, isPending, data: blogs } = useFetch(`https://blog-nest-backend.onrender.com/${category}`);
+  const { error, isPending, data: blogs } = useFetch(`https://blognest-backend.adaptable.app/${category}`);
 
   const filteredBlogs = blogs 
     ? blogs.filter(blog =>
