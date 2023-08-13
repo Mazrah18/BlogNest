@@ -20,13 +20,15 @@ const populateCollections = async () => {
     const db = client.db('blog');
     for (const category of categories) {
       const collection = db.collection(category);
-      const document = {
-        title: faker.lorem.sentence(),
-        body: faker.lorem.paragraph(),
-        author: faker.person.firstName(),
-      };
-      await collection.insertOne(document);
-      console.log(`Inserted a document into ${category} collection`);
+      for (let i = 0; i < 10; i++) {
+        const document = {
+          title: faker.lorem.sentence(),
+          body: faker.lorem.paragraphs(),
+          author: faker.person.firstName(),
+        };
+        await collection.insertOne(document);
+        console.log(`Inserted a document into ${category} collection`);
+      }
     }
   } catch (error) {
     console.error('Error:', error);

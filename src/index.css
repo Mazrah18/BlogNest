@@ -156,8 +156,7 @@
 
 
 .blog-preview {
-  display: flex;
-  flex-direction: column;
+
   position: relative; /* Allow absolute positioning for category badge */
   padding: 16px;
   border: 1px solid #ccc;
