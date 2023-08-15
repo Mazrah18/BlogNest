@@ -7,6 +7,9 @@
   color: #333;
 }
 
+.navbar{
+  background-color: black;
+}
 /* Navbar styling starts */
 .Navbar-items{
   color: white;
@@ -24,6 +27,7 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  color: aliceblue;
 }
 .navbar a:hover {
   color: #f1356d;
@@ -44,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0;
+
   padding: 10px 20px;
 }
 
@@ -207,7 +211,7 @@
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 15px;
-  background-color: #f9f9f9;
+  background-color: #fcfcfc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   text-align: center;
