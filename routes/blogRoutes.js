@@ -17,22 +17,22 @@ const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopo
 //     credentials: true
 //   }
 // ));
-app.use(cors(
-  {
-    origin: "*",
-    methods: ["POST", "GET", "DELETE"],
-    credentials: true
-  }
-));
-
-
 // app.use(cors(
 //   {
-//     origin: ["https://parth-blognest.netlify.app", "http://localhost:3000/"],
+//     origin: "*",
 //     methods: ["POST", "GET", "DELETE"],
 //     credentials: true
 //   }
 // ));
+
+
+app.use(cors(
+  {
+    origin: ["https://parth-blognest.netlify.app", "http://localhost:3000/"],
+    methods: ["POST", "GET", "DELETE"],
+    credentials: true
+  }
+));
 
 
 
