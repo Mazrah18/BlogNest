@@ -3,11 +3,11 @@ import useFetch from "../useFetch";
 
 const RecipeDetails = () => {
   const { recipeId } = useParams();
-  const { data: recipe, error, isPending } = useFetch(`https://blognest-backend.adaptable.app/recipes/${recipeId}`);
+  const { data: recipe, error, isPending } = useFetch(`https://blog-nest-gilt.vercel.app//recipes/${recipeId}`);
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch(`https://blognest-backend.adaptable.app/recipes/${recipeId}`, {
+    fetch(`https://blog-nest-gilt.vercel.app//recipes/${recipeId}`, {
       method: 'DELETE',
     })
     .then(response => {
