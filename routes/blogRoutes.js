@@ -9,15 +9,15 @@ const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWr
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(cors())
 
-// app.use(cors(
-//   {
-//     origin: ["https://parth-blognest.netlify.app", "http://localhost:3000/"],
-//     methods: ["POST", "GET", "DELETE"],
-//     credentials: true
-//   }
-// ));
+
+app.use(cors(
+  {
+    origin: ["https://parth-blognest.netlify.app", "http://localhost:3000/"],
+    methods: ["POST", "GET", "DELETE"],
+    credentials: true
+  }
+));
 
 
 
