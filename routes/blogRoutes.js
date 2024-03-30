@@ -9,7 +9,7 @@ const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWr
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-
+app.use(express.json())
 
 app.use(cors())
 
