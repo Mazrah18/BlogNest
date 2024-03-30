@@ -9,9 +9,15 @@ const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWr
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(express.json())
+app.use(express.json());
 
-app.use(cors())
+app.use(cors());
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*")
+  next();
+});
+
 
 client.connect()
   .then(() => {
