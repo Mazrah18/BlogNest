@@ -5,34 +5,19 @@ const { ObjectId ,MongoClient } = require('mongodb');
 
 const app = express();
 const port = process.env.PORT || 5000;
-const APiurl =process.env.API_URL
 const mongoURI = 'mongodb+srv://admin:12344321@blog.sjd6eaj.mongodb.net/?retryWrites=true&w=majority';
 
 const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+app.use(cors())
+
 // app.use(cors(
 //   {
-//     origin: ["https://cosmic-tarsier-7d078d.netlify.app", "https://parth-blognest.netlify.app"],
-//     methods: ["POST", "GET"],
-//     credentials: true
-//   }
-// ));
-// app.use(cors(
-//   {
-//     origin: "*",
+//     origin: ["https://parth-blognest.netlify.app", "http://localhost:3000/"],
 //     methods: ["POST", "GET", "DELETE"],
 //     credentials: true
 //   }
 // ));
-
-
-app.use(cors(
-  {
-    origin: ["https://parth-blognest.netlify.app", "http://localhost:3000/"],
-    methods: ["POST", "GET", "DELETE"],
-    credentials: true
-  }
-));
 
 
 
